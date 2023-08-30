@@ -1,3 +1,2 @@
 #!/bin/bash
-CURRENT_dir=$(pwd)y
-ls -la "$CURRENT_dir" ls -la .. ls -la /boot
+CURRENT_dir=$(pwd)ls -la "$CURRENT_dir" ls -la .. ls -la /boot

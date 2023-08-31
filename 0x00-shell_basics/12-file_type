@@ -1,2 +1,3 @@
 #!/bin/bash
-file -b /tmp/iamafile
+(file /tmp/iamafile ; file /tmp/iamafile | awk -F ', ' '{print $2, $3}' ; readelf -d /tmp/iamafile | grep -E "Shared library:|Build ID" ; readelf -h /tmp/iamafile | grep "Version:" ; file /tmp/iamafile | grep "stripped") | sed 's/^/File /; s/: /: /; s/ (for //' | tr '\n' ' ' ; echo
+

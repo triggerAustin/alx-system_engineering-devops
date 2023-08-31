@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(basename "$(dirname "$(pwd)")")"
+echo "$(dirname "$(pwd)")"

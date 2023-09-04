@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d >> file.txt | wc -l file.txt
+find . -type f -print | wc -l

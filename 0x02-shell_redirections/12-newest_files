@@ -1,2 +1,2 @@
 #1/bin/bash
-ls -t | head -n 10
+ls -d */ -t

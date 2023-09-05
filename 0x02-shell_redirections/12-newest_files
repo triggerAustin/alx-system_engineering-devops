@@ -1,2 +1,2 @@
 #1/bin/bash
-ls -d */ -t
+ls -d * -t

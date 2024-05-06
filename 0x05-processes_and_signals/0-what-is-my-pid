@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#display this files pid on call
+echo "$$"

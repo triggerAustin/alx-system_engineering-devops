@@ -2,6 +2,7 @@
 #checks if file school exists, is empty and is a file
 file="school"
 if [ -e $file ]; then
+	echo "school file exists"
 	if [ -f $file ]; then
 		if [ -s $file ]; then
 			echo "school file is not empty"

@@ -1,1 +1,11 @@
 #!/usr/bin/env bash
+#prints Best School but at 9th iteration adds hi in new line
+i=0
+
+while [ $i -lt 10 ]; do
+	echo "Best School"
+	if [ $i == 8 ]; then
+		echo "Hi"
+	fi
+	(( i++ ))
+done

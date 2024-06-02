@@ -49,7 +49,7 @@ There is also a monitering client to keep a log of the system to capture any err
 
 # 3-scale_up
 - A scaled up version of task 2
-![example_image] (images/3-scale_up)
+! [example_image] (images/3-scale_up)
 
 ## the images were drawn on draw.io
 ## Authors

@@ -47,6 +47,10 @@ In the architecture below, there are 3 firewalls. One before accessing the load 
 There is also a monitering client to keep a log of the system to capture any errors and keep track of the systems health
 ![example_image](images/2-secured_and_monitored_web_infrastructure.jpg)
 
+# 3-scale_up
+- A scaled up version of task 2
+![example_image] (images/3-scale_up)
+
 ## the images were drawn on draw.io
 ## Authors
 

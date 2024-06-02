@@ -53,7 +53,7 @@ There is also a monitering client to keep a log of the system to capture any err
 This project is maintained by Emmanuel Odenyire Anyira and Austin Muthoni, both being students at ALX Africa, taking the ALX Software Engineering Program. Contributions to the project are welcomed via pull requests on GitHub.
 
 For collaborations or inquiries;
-please contact Emmanuel Odenyire Anyira via:
+Please contact Emmanuel Odenyire Anyira via:
 
 - Email: eodenyire@gmail.com
 - LinkedIn: Emmanuel Odenyire Anyira

@@ -30,7 +30,7 @@ WORK FLOW
 	respondes with stored data such as information, stored posts and other website content
 6. Response to user:
 	Nginx recieves processed content from application server and sends it back to user via http/https
-![example_image](images/0-simple_web_stack)
+![example_image](images/0-simple_web_stack.jpg)
 
 # 1-distributed_web_infrastructure
 WORK FLOW
@@ -38,14 +38,14 @@ WORK FLOW
 the load balancer is introduced right before reaching the servers.
 This ensures USER requests are distributed through the available servers(however many there are) as per a predefined algorithim, (i.e Round-Robin)
 Extra servers are just webservers with the same structure, an application server and myswl database server
-![example image](images/1-distributed_web_infrastructure)
+![example image](images/1-distributed_web_infrastructure.jpg)
 
 # 2-secured_and_monitored_web_infrastructure
 WORK FLOW
 - Aside from the inclusion of a load balancer to distribute the traffic, for security, a series of firewalls are strategically placed through out the architecture to ensure the system remains secure.
 In the architecture below, there are 3 firewalls. One before accessing the load balancer, another before accessing the webservers and another right before accessing the database server.
 There is also a monitering client to keep a log of the system to capture any errors and keep track of the systems health
-![example_image](images/2-secured_and_monitored_web_infrastructure)
+![example_image](images/2-secured_and_monitored_web_infrastructure.jpg)
 
 ## the images were drawn on draw.io
 ## Authors

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#ssh config file
+Host alx_server
+    HostName 100.27.5.193
+    User ubuntu
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no

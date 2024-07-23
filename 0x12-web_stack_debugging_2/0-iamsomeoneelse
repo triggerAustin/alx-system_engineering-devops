@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 #check if argument was passed
 if [ "#$" -ne 1 ]; then

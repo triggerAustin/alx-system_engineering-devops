@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # execute whoami as user passed as arg
 
+if [ "$#" -ne 1 ]; then
+	'whoami'
+	exit 1
+fi
+
 USER=$1
+
+echo "$USER"
 
 su -c 'whoami' - $USER

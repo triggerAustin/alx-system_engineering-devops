@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
+# execute whoami as user passed as arg
 
-#check if argument was passed
-if [ "#$" -ne 1 ]; then
-	echo "Usage: $0 username"
-	exit 1
-fi
-
-USER = $1
+USER=$1
 
 su -c 'whoami' - $USER

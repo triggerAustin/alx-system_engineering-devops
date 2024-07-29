@@ -31,7 +31,7 @@ def store_csv(data):
     """
     csv_filename = f'{argv[1]}.csv'
     with open(csv_filename, mode='w', newline='') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in data[1]:
             writer.writerow([argv[1], data[0]['name'], task['completed'],
                             task['title']])

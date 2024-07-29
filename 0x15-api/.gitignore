@@ -3,3 +3,4 @@
 1-main_2.py
 *.csv
 .*.swp
+*.json

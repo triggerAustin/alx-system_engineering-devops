@@ -29,6 +29,7 @@ def store_csv(data):
     """
         stores employee data in csv
     """
+    n = 0
     name = data[0].get('name').split(' ')
     csv_filename = f'{argv[1]}.csv'
     with open(csv_filename, mode='w', newline='') as f:

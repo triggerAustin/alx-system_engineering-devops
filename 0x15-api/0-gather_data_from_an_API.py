@@ -17,11 +17,11 @@ def get_data(em_id):
     """
     base_url = "https://jsonplaceholder.typicode.com/"
 
-    user_response = request.get(f'{base_url}/users/{employee_id}')
+    user_response = requests.get(f'{base_url}/users/{em_id}').json()
     em_name = user_response.get('name')
 
     # Fetch TODOs for employee
-    todos = request.get(f'{base_url}/todos', params={'user_id': em_id}).json()
+    todos = requests.get(f'{base_url}/todos', params={'user_id': em_id}).json()
 
     return ([em_name, todos])
 

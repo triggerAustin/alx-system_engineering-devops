@@ -30,17 +30,20 @@ def store_all_json(data):
     """
         stores all employee data in json
     """
+    users = data[0]
+    todos = data[1]
     employee_infor = {}
     tasks = []
-    i = 0
-    while i < len(data[0]):
-        for task in data[1]:
-            if task.get('userId') == i:
+    i = 1
+    while i <= len(users):
+        for task in todos:
+            if task['userId'] == i:
+                index = task['userId']
                 tasks.append({
-                    'username': data[0][i].get('username'),
+                    'username': todos[i].get('username'),
                     'task': task['title'],
                     'completed': task['completed']})
-        employee_infor[task['userId']] = tasks
+        employee_infor[index] = tasks
         i += 1
 
     with open('todo_all_employees' + '.json', 'w') as f:

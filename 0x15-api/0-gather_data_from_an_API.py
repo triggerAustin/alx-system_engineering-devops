@@ -38,7 +38,7 @@ def display_data(data):
         if tasks['completed'] is True:
             n += 1
             task += '\t' + tasks['title'] + '\n'
-    print(f'Employee {name} is done with tasks({n}/{len(todos)})')
+    print(f'Employee {name} is done with tasks({n}/{len(todos)}):')
     print(task, end='')
 
 

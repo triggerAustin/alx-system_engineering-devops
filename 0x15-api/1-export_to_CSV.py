@@ -20,7 +20,7 @@ def get_data(em_id):
 
     user_response = requests.get(f'{base_url}/users/{em_id}').json()
     # Fetch TODOs for employee
-    todos = requests.get(f'{base_url}/todos', params={'user_id': em_id}).json()
+    todos = requests.get(f'{base_url}/todos', params={'userId': em_id}).json()
 
     return ([user_response, todos])
 

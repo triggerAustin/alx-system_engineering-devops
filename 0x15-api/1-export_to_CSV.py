@@ -30,7 +30,7 @@ def store_csv(data):
         stores employee data in csv
     """
     n = 0
-    name = data[0].get('name')
+    name = data[0].get('username')
     csv_filename = f'{argv[1]}.csv'
     with open(csv_filename, mode='w', newline='') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)

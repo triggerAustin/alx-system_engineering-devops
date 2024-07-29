@@ -29,11 +29,12 @@ def store_csv(data):
     """
         stores employee data in csv
     """
+    name = data[0].get('name').split(' ')
     csv_filename = f'{argv[1]}.csv'
     with open(csv_filename, mode='w', newline='') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in data[1]:
-            writer.writerow([argv[1], data[0]['name'], task['completed'],
+            writer.writerow([argv[1], name[0], task['completed'],
                             task['title']])
 
 

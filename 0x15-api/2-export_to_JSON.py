@@ -4,10 +4,10 @@
     based on their id from
     a rest API
 """
-
+import json
 import requests
 from sys import argv
-import json
+
 
 def get_data(em_id):
     """
@@ -35,10 +35,10 @@ def store_json(data):
     user_infor = {}
     tasks = []
     for task in data[1]:
-            tasks.append({
-                'task': task['title'],
-                'completed': task['completed'],
-                'username': name})
+        tasks.append({
+            'task': task['title'],
+            'completed': task['completed'],
+            'username': name})
     user_infor[task['userId']] = tasks
     with open(str(argv[1]) + '.json', mode='w') as f:
         json.dump(user_infor, f)

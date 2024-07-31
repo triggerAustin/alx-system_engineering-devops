@@ -38,7 +38,7 @@ def store_all_json(data):
     while i <= len(users):
         for task in todos:
             if task['userId'] == i:
-                index = task['userId']
+                index = task['id']
                 tasks.append({
                     'username': todos[i].get('username'),
                     'task': task['title'],

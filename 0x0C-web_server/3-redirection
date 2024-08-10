@@ -7,7 +7,7 @@ then
 	sudo apt-get install -y nginx
 fi
 
-echo '<html><head><meta http-equiv="refresh" content="0; URL=https://www.youtube.com/watch?v=QH2-TGUlwu4" /></head></html>' | sudo tee /var/www/html/redirect_me.html > /d
+echo '<html><head><meta http-equiv="refresh" content="0; URL=https://www.youtube.com/watch?v=QH2-TGUlwu4" /></head></html>' | sudo tee /var/www/html/redirect_me.html > /dev/null
 
 sudo bash -c 'cat > /etc/nginx/sites-available/default <<EOF
 server {

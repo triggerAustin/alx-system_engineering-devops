@@ -5,6 +5,30 @@ sudo apt-get update
 
 sudo apt-get install nginx -y
 
-echo "Hello World!" | sudo tree /var/www/html/index.nginx-debian.html > /dev/null
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
 
+#set up nginx server
+sudo bash -c cat 'cat > /etc/nginx/sites-enabled/default <<EOF
+	server {
+		listen 80 default_server;
+		listen [::]:80 default_server;
+
+		root /var/www/html;
+		index index.html;
+
+		server_name_;
+
+		location / {
+			try_files \$uri \$uri/ =404;
+		}
+	}
+	EOF'
+
+#test nginx
+sudo nginx -t
+
+#stop nginx
+sudo service nginx stop
+
+#start server
 sudo service nginx start

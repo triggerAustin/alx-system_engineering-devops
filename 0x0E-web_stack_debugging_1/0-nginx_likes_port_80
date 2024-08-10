@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# script to ensure nginx is running on port 80 
+# on all servers active IPV4 ips
+
+# rm existing server block configuration
+rm /etc/nginx/sites-enabled/default
+
+# create symlink
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+
+#restart nginx
+service nginx restart

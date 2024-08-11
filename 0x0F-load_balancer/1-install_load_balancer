@@ -19,8 +19,8 @@ frontend penality
 
 backend web_servers
         balance roundrobin
-        server 335953-web-01 54.196.29.210:80 check
-        server 335953-web-02 54.87.217.94:80 check
+        server 525998-web-01 100.27.5.193:80 check
+        server 525998-web-02 52.87.23.85:80 check
 EOF'
 
 # Restarting HAproxy service

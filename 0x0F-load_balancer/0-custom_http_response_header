@@ -4,26 +4,28 @@
 # Update and install nginx
 sudo apt-get update -y && sudo apt-get install -y nginx
 
-mkdir -p /etc/nginx/html
-echo "Hello World!" >  /var/www/html/index.nginx-debian.html
-echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
+sudo mkdir -p /etc/nginx/html
+sudo bash -c 'echo "Hello World!" >  /var/www/html/index.nginx-debian.html'
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 
-printf %s "server {
-	listen 80;
-	listen [::]:80 default_server;
-	add_header X-Served-By $HOSTNAME;
-	root   /var/www/html;
-	index  index.html index.htm index.nginx-debian.html;
-	location /redirect_me {
-		return 301 https://www.github.com/Dev-Kings/;
-	}
-	error_page 404 /404.html;
-	location /404.html {
-		root /etc/nginx/html;
-		internal;
-	}
+sudo bash -c 'cat > /etc/nginx/sites-available/default <<EOF
+server {
+        listen 80;
+        listen [::]:80 default_server;
+        add_header X-Served-By $HOSTNAME;
+        root   /var/www/html;
+        index  index.html index.htm index.nginx-debian.html;
+        location /redirect_me {
+                return 301 https://www.github.com/triggerAustin/;
+        }
+        error_page 404 /404.html;
+        location /404.html {
+                root /etc/nginx/html;
+                internal;
+        }
 
-}" > /etc/nginx/sites-available/default
+}
+EOF'
 
 # Restart Nginx, to apply changes
-service nginx restart
+sudo service nginx restart

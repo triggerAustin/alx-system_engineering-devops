@@ -1,12 +1,12 @@
 # automated fix for apache fail
 
 file { '/var/www/html/wp-settings.php':
-  ensure  => file,
-  owner   => 'www-data',
-  group   => 'www-data',
-  mode    => '0644',
-  source  => 'puppet:///modules/mymodule/wp-settings.php', # Ensure this file is managed by Puppet
-  notify  => Service['apache2'],
+  ensure => file,
+  owner  => 'www-data',
+  group  => 'www-data',
+  mode   => '0644',
+  source => 'puppet:///modules/mymodule/wp-settings.php', # Ensure this file is managed by Puppet
+  notify => Service['apache2'],
 }
 
 exec { 'fix_wordpress_inclusion':

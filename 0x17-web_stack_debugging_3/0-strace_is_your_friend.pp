@@ -2,5 +2,6 @@
 
 exec {'fix wordpress site':
 	provider => shell,
-	command => 'sudo sed -i "s/phpp/php/g" /var/www/html/wq-settings.php'
+	command => 'sudo sed -i "s/phpp/php/g" /var/www/html/wq-settings.php',
+	path => ['/bin', '/usr/bin/', '/usr/local/bin/'],
 }
